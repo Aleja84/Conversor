@@ -37,6 +37,9 @@ public class convertidorTemperaturaController {
         String texto = txtDato.getText();
         System.out.println(texto);
         double numero = Double.parseDouble(texto);
+        if(numero < 0){
+            throw new Exception("Número negativo");
+        }
         System.out.println(numero);
         switch (indicador) {
             case "CF":
@@ -77,6 +80,8 @@ public class convertidorTemperaturaController {
 
         }catch (NumberFormatException e){
             generarAlerta("Debe ingresar un número");
+        }catch (Exception e){
+            generarAlerta("Ingrese un número positivo");
         }
     }
 

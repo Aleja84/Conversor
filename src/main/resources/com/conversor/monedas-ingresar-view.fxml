@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: rgb(223, 88, 19);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.conversor.convertidorMonedasController">
+    <children>
+      <TextField fx:id="txtDato" layoutX="77.0" layoutY="48.0" prefHeight="27.0" prefWidth="190.0" style="-fx-background-color: rgb(230, 119, 63); -fx-border-color: white; -fx-text-fill: white;" />
+      <ImageView fitHeight="27.0" fitWidth="36.0" layoutX="36.0" layoutY="48.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagenes/monedas.png" />
+         </image>
+      </ImageView>
+        <Label layoutX="26.0" layoutY="36.0" prefHeight="17.0" prefWidth="248.0" text="Ingrese la cantidad que deseas covertir" textFill="WHITE" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="20.0">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="btnAceptar" layoutX="36.0" layoutY="91.0" mnemonicParsing="false" onAction="#realizarConversion" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: rgb(0, 0, 0); -fx-border-color: white;" text="Aceptar" textFill="WHITE" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="172.0">
+            <font>
+                <Font name="Arial Bold" size="12.0" />
+            </font>
+        </Button>
+      <Button fx:id="btnCancelar" layoutX="177.0" layoutY="91.0" mnemonicParsing="false" onAction="#retroceder" prefHeight="37.0" prefWidth="92.0" style="-fx-background-color: rgb(0, 0, 0); -fx-border-color: white;" text="Cancelar" textFill="WHITE" AnchorPane.rightAnchor="31.0">
+         <font>
+            <Font name="Arial Bold" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
